@@ -1,0 +1,11 @@
+<h1>Patrol Portal</h1>
+<p>This is our website, go ahead check it out</p>
+<% if volunteer_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_volunteer_session_path, method: :get) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_volunteer_session_path)  %>  
+  </li>
+<% end %>
